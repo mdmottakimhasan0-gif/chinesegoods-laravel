@@ -35,7 +35,7 @@ if (! file_exists($databasePath)) {
 $envVars = [
     'APP_NAME' => 'Chinese Goods BD',
     'APP_ENV' => 'production',
-    'APP_DEBUG' => 'true',
+    'APP_DEBUG' => 'false',
     'APP_KEY' => 'base64:XqZdhPyuvMMVqEfzTXUEhOSbn9Zz3Z1PaQXJr7aRx64=',
     'APP_URL' => 'https://'.($_SERVER['HTTP_HOST'] ?? 'localhost'),
     'LARAVEL_STORAGE_PATH' => '/tmp/storage',
