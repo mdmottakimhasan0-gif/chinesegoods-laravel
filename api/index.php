@@ -49,6 +49,7 @@ $envVars = [
     'DB_DATABASE' => $databasePath,
     'SESSION_DRIVER' => 'cookie',
     'CACHE_STORE' => 'array',
+    'APP_MAINTENANCE_DRIVER' => 'file',
     'LOG_CHANNEL' => 'stderr',
 ];
 
