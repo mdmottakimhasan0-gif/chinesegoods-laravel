@@ -4,14 +4,12 @@
   "outputDirectory": "public",
   "functions": {
     "api/index.php": {
-      "runtime": "vercel-php@0.9.0"
+      "runtime": "vercel-php@0.9.0",
+      "memory": 1024,
+      "maxDuration": 15
     }
   },
   "routes": [
-    {
-      "src": "/build/(.*)",
-      "dest": "/public/build/$1"
-    },
     {
       "src": "/css/(.*)",
       "dest": "/public/css/$1"
@@ -23,6 +21,10 @@
     {
       "src": "/images/(.*)",
       "dest": "/public/images/$1"
+    },
+    {
+      "src": "/build/(.*)",
+      "dest": "/public/build/$1"
     },
     {
       "src": "/favicon.ico",
@@ -40,14 +42,10 @@
   "env": {
     "APP_NAME": "Chinese Goods BD",
     "APP_ENV": "production",
-    "APP_DEBUG": "false",
+    "APP_DEBUG": "true",
     "APP_KEY": "base64:XqZdhPyuvMMVqEfzTXUEhOSbn9Zz3Z1PaQXJr7aRx64=",
-    "APP_CONFIG_CACHE": "/tmp/config.php",
-    "APP_EVENTS_CACHE": "/tmp/events.php",
-    "APP_PACKAGES_CACHE": "/tmp/packages.php",
-    "APP_ROUTES_CACHE": "/tmp/routes.php",
-    "APP_SERVICES_CACHE": "/tmp/services.php",
-    "VIEW_COMPILED_PATH": "/tmp/views",
+    "LARAVEL_STORAGE_PATH": "/tmp/storage",
+    "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
     "CACHE_STORE": "array",
     "SESSION_DRIVER": "cookie",
     "LOG_CHANNEL": "stderr"

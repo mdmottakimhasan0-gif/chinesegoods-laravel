@@ -22,3 +22,11 @@ return Application::configure(basePath: dirname(__DIR__))
             fn (Request $request) => $request->is('api/*') || $request->expectsJson(),
         );
     })->create();
+
+if (isset($_ENV['LARAVEL_STORAGE_PATH'])) {
+    $app->useStoragePath($_ENV['LARAVEL_STORAGE_PATH']);
+} elseif (isset($_SERVER['LARAVEL_STORAGE_PATH'])) {
+    $app->useStoragePath($_SERVER['LARAVEL_STORAGE_PATH']);
+}
+
+return $app;
